@@ -1,0 +1,85 @@
+{
+    "contraCheque": [
+        {
+            "idContraCheque": "mpsp/10/2020/1",
+            "chaveColeta": "mpsp/10/2020",
+            "nome": "ABNER CASTORINO",
+            "matricula": "3725",
+            "funcao": "PROMOTOR DE JUSTICA (ENTRANCIA FINAL)",
+            "localTrabalho": "PROMOTORIA DE JUSTICA DE SAO BERNARDO DO CAMPO",
+            "ativo": true,
+            "remuneracoes": {
+                "remuneracao": [
+                    {
+                        "categoria": "contracheque_2019_jul_forward",
+                        "item": "Remuneração do Cargo Efetivo",
+                        "valor": 33689.1
+                    },
+                    {
+                        "categoria": "contracheque_2019_jul_forward",
+                        "item": "Outras Verbas Remuneratórias, Legais ou Judiciais",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "contracheque_2019_jul_forward",
+                        "item": "Função de Confiança ou Cargo em Comissão",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "contracheque_2019_jul_forward",
+                        "item": "Gratificação Natalina (13º  sal.)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "contracheque_2019_jul_forward",
+                        "item": "Férias (1/3 constitucional)",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "contracheque_2019_jul_forward",
+                        "item": "Abono de Permanência",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "contracheque_2019_jul_forward",
+                        "item": "Contribuição Previdenciária",
+                        "valor": -5197.77
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "contracheque_2019_jul_forward",
+                        "item": "Imposto de Renda",
+                        "valor": -8506.91
+                    },
+                    {
+                        "natureza": "D",
+                        "categoria": "contracheque_2019_jul_forward",
+                        "item": "Retenção por Teto Constitucional"
+                    },
+                    {
+                        "categoria": "indenizações_2020_out",
+                        "item": "Férias em pecúnia",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "indenizações_2020_out",
+                        "item": "Gratificação Cumulativa",
+                        "valor": 5604.22,
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "indenizações_2020_out",
+                        "item": "Gratificação de Natureza Especial",
+                        "tipoReceita": "O"
+                    },
+                    {
+                        "categoria": "indenizações_2020_out",
+                        "item": "Gratificação de Grupo de Atuação Especial",
+                        "tipoReceita": "O"
+                    }
+                ]
+            }
+        }
+    ]
+}
