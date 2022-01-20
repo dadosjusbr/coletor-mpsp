@@ -11,9 +11,10 @@ CONTRACHEQUE_2019_JUL_FORWARD = "contracheque_2019_jul_forward"
 INDENIZACOES_2019_JUL = "indenizações_2019_jul"
 INDENIZACOES_2021_BACKWARD = "indenizações_2021_backward"
 INDENIZACOES_2021_JAN = "indenizações_2021_jan"
-INDENIZACOES_2021_FEV = "indenizações_2021_fev"
+INDENIZACOES_2021_FEV_2020_DEZ = "indenizações_2021_fev"
 INDENIZACOES_2021_MAR_FORWARD = "indenizações_2021_mar_forward"
 INDENIZACOES_2021_JUN_FORWARD = "indenizações_2021_jun_forward"
+INDENIZACOES_2020_OUT = "indenizações_2020_out"
 
 HEADERS = {
     CONTRACHEQUE_2018: {
@@ -104,7 +105,7 @@ HEADERS = {
         "Gratificação de Natureza Especial": 6,
         "Gratificação de Grupo de Atuação Especial": 7,
     },
-    INDENIZACOES_2021_FEV: {
+    INDENIZACOES_2021_FEV_2020_DEZ: {
         "Auxílio Alimentação": 4,
         "Férias em pecúnia": 5,
         "Gratificação Cumulativa": 6,
@@ -127,6 +128,12 @@ HEADERS = {
         "Gratificação Cumulativa": 8,
         "Gratificação de Natureza Especial": 9,
         "Gratificação de Grupo de Atuação Especial": 10,
+    },
+    INDENIZACOES_2020_OUT: {
+        "Férias em pecúnia": 4,
+        "Gratificação Cumulativa": 5,
+        "Gratificação de Natureza Especial": 6,
+        "Gratificação de Grupo de Atuação Especial": 7,
     },
 }
 
@@ -248,10 +255,14 @@ def parse(data, chave_coleta, mes, ano):
             employees.update(parse_employees(data.contracheque, chave_coleta, mes, ano))
             if int(ano) == 2019 and int(mes) in [7, 8]:
                 update_employees(data.indenizatorias, employees, INDENIZACOES_2019_JUL)
+            elif int(ano) == 2020 and int(mes) == 10:
+                update_employees(data.indenizatorias, employees, INDENIZACOES_2020_OUT)
+            elif int(ano) == 2020 and int(mes) == 12:
+                update_employees(data.indenizatorias, employees, INDENIZACOES_2021_FEV_2020_DEZ)
             elif int(ano) == 2021 and int(mes) == 1:
                 update_employees(data.indenizatorias, employees, INDENIZACOES_2021_JAN)
             elif int(ano) == 2021 and int(mes) == 2:
-                update_employees(data.indenizatorias, employees, INDENIZACOES_2021_FEV)
+                update_employees(data.indenizatorias, employees, INDENIZACOES_2021_FEV_2020_DEZ)
             elif int(ano) == 2021 and int(mes) in [3, 4, 5]:
                 update_employees(data.indenizatorias, employees, INDENIZACOES_2021_MAR_FORWARD)
             elif int(ano) == 2021 and int(mes) in [6, 7, 8]:

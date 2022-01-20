@@ -77,6 +77,21 @@ class TestParser(unittest.TestCase):
         result_to_dict = MessageToDict(result_data)
         self.assertEqual(expected_07_2019, result_to_dict)
 
+    def test_out_2020(self):
+        self.maxDiff = None
+        # Json com a saida esperada
+        with open("src/output_test/expected/expected_10_2020.json", "r") as fp:
+            expected_10_2020 = json.load(fp)
+
+        files = ["src/output_test/sheets/membros-ativos-contracheque-10-2020.ods",
+        "src/output_test/sheets/membros-ativos-verbas-indenizatorias-10-2020.ods"]
+
+        dados = load(files, "2020", "10")
+        result_data = parse(dados, "mpsp/10/2020", 10, 2020)
+        # Converto o resultado do parser, em dict
+        result_to_dict = MessageToDict(result_data)
+        self.assertEqual(expected_10_2020, result_to_dict)
+
     def test_jan_2021(self):
         self.maxDiff = None
         # Json com a saida esperada
